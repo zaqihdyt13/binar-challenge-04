@@ -66,25 +66,25 @@ function DetailPage() {
             />
             <h1 className="fs-1 fw-bold my-4 overflow-hidden">{movie.title}</h1>
             <div className="movie-genre d-inline-block mt-2 mb-4 p-2">
-              <span className="me-3">Genre:</span>
+              <span className="me-3">Genres:</span>
               {movie.genres.map((genre) => (
-                <div className="d-inline-flex" key={genre.id}>{genre.name} <span className="mx-3">|</span></div>
+                <div className="d-inline-flex border py-2 px-3" key={genre.id}> {genre.name} </div>
               ))}
             </div>
             <p className="mt-0 mb-4">{movie.overview}</p>
             <div className="d-flex align-items-center mt-3 mb-5 gap-2">
               <AiOutlineStar className="rate-star" />
-              {movie.vote_average}/10
+              {movie.vote_average} / 10
             </div>
             <button className="btn-trailer py-2 border-0 rounded-5">
-              <p className="fw-bold m-auto d-flex justify-content-center gap-1 align-items-center text-white">
+              <a href="https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=bd0af39a72aa4f0031d784df2908bbb0&language=en-US" className="text-decoration-none fw-bold m-auto d-flex justify-content-center gap-1 align-items-center text-white">
                 <AiOutlinePlayCircle className="fs-5 text-warning" /> WATCH
                 TRAILER
-              </p>
+              </a>
             </button>
           </div>
           <img
-            className="movie-poster h-50 d-flex ms-auto me-5 mt-4 border border-2 border-dark rounded"
+            className="movie-poster h-50 d-flex ms-auto me-5 mt-1 border border-2 border-dark rounded"
             src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}
             alt={movie.title}
           />

@@ -23,23 +23,6 @@ function HomePage() {
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   const search = async () => {
-  //     try {
-  //       if (searchTerm.trim() === "") {
-  //         setSearchResults([]);
-  //       } else {
-  //         const results = await searchMovies(searchTerm); // Gunakan fungsi pencarian
-  //         setSearchResults(results);
-  //       }
-  //     } catch (error) {
-  //       console.error("Error searching movies: ", error);
-  //     }
-  //   };
-
-  //   search();
-  // }, [searchTerm]);
-
   const search = async () => {
     try {
       if (searchTerm.trim() === "") {
@@ -93,13 +76,13 @@ function HomePage() {
       <div className="hero-section">
         <CarouselHome />
       </div>
-      <div className="movie-section">
+      <div className="movie-section ps-4">
         <h1 className="my-4 mx-5 fw-bold">Popular Movies</h1>
-        <div className="movie-container w-100 d-flex gap-4 flex-wrap justify-content-start mt-3 ps-5">
+        <div className="movie-container w-100 d-flex gap-4 flex-wrap justify-content-start py-3 ps-5">
           {searchResults.length > 0
             ? searchResults.map((movie) => (
                 <div
-                  className="movie-wrapper d-flex flex-column align-items-center rounded position-relative"
+                  className="movie-wrapper d-flex flex-column align-items-center rounded-4 position-relative"
                   key={movie.id}
                 >
                   <Link to={`/detail/${movie.id}`}>
@@ -125,7 +108,7 @@ function HomePage() {
               ))
             : movies.map((movie) => (
                 <div
-                  className="movie-wrapper d-flex flex-column align-items-center rounded position-relative"
+                  className="movie-wrapper d-flex flex-column align-items-center rounded-4 position-relative"
                   key={movie.id}
                 >
                   <Link to={`/detail/${movie.id}`}>
@@ -143,7 +126,7 @@ function HomePage() {
                       </div>
                       <div className="movie-rate fw-bold mt-2 d-flex align-items-center gap-1">
                         <AiOutlineStar className="rate-star" />
-                        {movie.vote_average}/10
+                        {movie.vote_average} / 10
                       </div>
                     </div>
                   </Link>
