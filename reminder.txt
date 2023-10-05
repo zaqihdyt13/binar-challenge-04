@@ -1,0 +1,47 @@
+REACT_APP_BASEURL=https://api.themoviedb.org/3
+REACT_APP_BASEIMGURL=https://image.tmdb.org/t/p/w500
+REACT_APP_APIKEY=bd0af39a72aa4f0031d784df2908bbb0
+REACT_APP_TOKEN=eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZDBhZjM5YTcyYWE0ZjAwMzFkNzg0ZGYyOTA4YmJiMCIsInN1YiI6IjY1MThjNGFlMDcyMTY2MDExYzAxNDEzMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.alS3_8updEz-xgbX8zsShOS1v2EiVKCyUnuwIzYjOIk
+
+// import axios from "axios";
+
+// const API_KEY = "bd0af39a72aa4f0031d784df2908bbb0";
+// const BASE_URL = "https://api.themoviedb.org/3";
+
+// // export const getMovieList = async () => {
+// //   const movie = await axios.get(
+// //     "https://api.themoviedb.org/3/movie/popular?api_key=bd0af39a72aa4f0031d784df2908bbb0&bahasa=en-US&page=1"
+// //   );
+// //   return movie.data.results;
+// // };
+
+// export const getMovieList = async () => {
+//   const movies = await axios.get(
+//     "https://api.themoviedb.org/3/discover/movie?api_key=bd0af39a72aa4f0031d784df2908bbb0&language=en-US&page=1"
+//   );
+//   return movies.data.results;
+// };
+
+// export const fetchMovieDetails = async (movieId) => {
+//   try {
+//     const response = await axios.get(
+//       `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=en-US`
+//     );
+//     return response.data;
+//   } catch (error) {
+//     console.error("Error fetching movies: ", error);
+//     throw error;
+//   }
+// };
+// export const searchMovie = async (q) => {
+//   const search = await axios.get(
+//     `https://api.themoviedb.org/3/search/movie?query=${q}&api_key=bd0af39a72aa4f0031d784df2908bbb0&page=1`  );
+//   return search.data;
+// };
+
+// export const getMovieGenres = async () => {
+//   const genre = await axios.get(
+//     "https://api.themoviedb.org/3/genre/movie/list?api_key=bd0af39a72aa4f0031d784df2908bbb0&language=en-US"
+//   );
+//   return genre.data;
+// };
