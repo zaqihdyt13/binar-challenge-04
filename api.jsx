@@ -38,16 +38,3 @@ export const searchMovies = async (query) => {
     throw error;
   }
 };
-
-export const fetchMovieGenres = async (movieId) => {
-  try {
-    const response = await axios.get(
-      `${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`
-    );
-    return response.data.genres;
-  } catch (error) {
-    console.error("Error fetching movies: ", error);
-
-    throw error;
-  }
-};
